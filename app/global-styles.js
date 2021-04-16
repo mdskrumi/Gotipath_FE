@@ -29,7 +29,9 @@ const GlobalStyle = createGlobalStyle`
 
   /* Own Styles */
 
-  .login__page__body{
+  .login__page__body, 
+  .signup__page__body
+  {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -39,12 +41,36 @@ const GlobalStyle = createGlobalStyle`
     margin: auto;
   }
 
-  .login__page__title{
+  .login__page__title, 
+  .signup__page__title 
+  {
     text-align: center;
     margin: 3.5rem auto;
   }
 
+  .login__form__section
+  .signup__form__section
+  {
+    width: 50vw;
+    min-width: 300px;
+    max-width: 400px;
+    text-align: center;
+  }
 
+  .input__left__message{
+    text-align: right;
+  }
+
+  .sign__up__instead{
+    margin: 1.5rem auto;
+  }
+
+  .signup__page__switch{
+    width: 50vw;
+    min-width: 300px;
+    max-width: 400px;
+  }
+  
   .toggle__switch {
     background-color: #F2F2F2;
     border-radius: 37px;
@@ -77,22 +103,6 @@ const GlobalStyle = createGlobalStyle`
     background-color: #F2F2F2;
     border-radius: 30px;
     cursor: pointer;
-  }
-
-
-  .login__form__section{
-    width: 50vw;
-    min-width: 300px;
-    max-width: 400px;
-    text-align: center;
-  }
-
-  .input__left__message{
-    text-align: right;
-  }
-
-  .sign__up__instead{
-    margin: 1.5rem auto;
   }
 
 
