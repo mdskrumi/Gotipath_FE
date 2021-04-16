@@ -48,7 +48,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 3.5rem auto;
   }
 
-  .login__form__section
+  .login__form__section,
   .signup__form__section
   {
     width: 50vw;
@@ -61,7 +61,9 @@ const GlobalStyle = createGlobalStyle`
     text-align: right;
   }
 
-  .sign__up__instead{
+  .sign__up__instead,
+  .login__instead
+  {
     margin: 1.5rem auto;
   }
 
@@ -70,7 +72,7 @@ const GlobalStyle = createGlobalStyle`
     min-width: 300px;
     max-width: 400px;
   }
-  
+
   .toggle__switch {
     background-color: #F2F2F2;
     border-radius: 37px;

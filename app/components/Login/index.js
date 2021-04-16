@@ -56,9 +56,11 @@ function Login(props) {
       </form>
 
       <div className="sign__up__instead">
-        <button className="ui button" type="button">
-          <a href="/sign-up">Sign Up</a>
-        </button>
+        <a href="/sign-up">
+          <button className="ui button" type="button">
+            Sign Up, Instead
+          </button>
+        </a>
       </div>
     </>
   );

@@ -29,6 +29,25 @@ export function SignUpPage() {
   const SIGN_UP_OPTIONS = ['Personal', 'Company'];
   const [option, setOption] = useState(0);
 
+  const onPersonalSignUpSubmit = (
+    firstName,
+    lastName,
+    email,
+    password,
+    confirmPassword,
+  ) => {
+    console.log(firstName, lastName, email, password, confirmPassword);
+  };
+
+  const onCompanySignUpSubmit = (
+    companyName,
+    email,
+    password,
+    confirmPassword,
+  ) => {
+    console.log(companyName, email, password, confirmPassword);
+  };
+
   return (
     <div>
       <Helmet>
@@ -47,9 +66,13 @@ export function SignUpPage() {
             selectedIndex={option}
           />
         </div>
-        <div className="login__form__section">
-          {SIGN_UP_OPTIONS[option] === 'Personal' && <SignUpPersonal />}
-          {SIGN_UP_OPTIONS[option] === 'Company' && <SignUpCompany />}
+        <div className="signup__form__section">
+          {SIGN_UP_OPTIONS[option] === 'Personal' && (
+            <SignUpPersonal onPersonalSignUpSubmit={onPersonalSignUpSubmit} />
+          )}
+          {SIGN_UP_OPTIONS[option] === 'Company' && (
+            <SignUpCompany onCompanySignUpSubmit={onCompanySignUpSubmit} />
+          )}
         </div>
       </div>
     </div>
