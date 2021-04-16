@@ -36,17 +36,14 @@ const GlobalStyle = createGlobalStyle`
     align-items: center;
     width: 90vw;
     min-height: 100vh;
-    background-color: grey;
     margin: auto;
   }
 
   .login__page__title{
     text-align: center;
+    margin: 3.5rem auto;
   }
 
-  .login__page__switch{
-    width: 400px;
-  }
 
   .toggle__switch {
     background-color: #F2F2F2;
@@ -61,18 +58,18 @@ const GlobalStyle = createGlobalStyle`
     padding: 5px;
     margin: 10px auto 10px auto;
     /* width: 100%; */
-}
+  }
 
-.selected {
+  .selected {
     color: #F7791E;
     font-weight: bold;
     width: 50%;
     padding: 10px;
     background-color: white;
     border-radius: 30px;
-}
+  }
 
-.unselected {
+  .unselected {
     color: #707D8C;
     font-weight: bold;
     width: 50%;
@@ -80,7 +77,24 @@ const GlobalStyle = createGlobalStyle`
     background-color: #F2F2F2;
     border-radius: 30px;
     cursor: pointer;
-}
+  }
+
+
+  .login__form__section{
+    width: 50vw;
+    min-width: 300px;
+    max-width: 400px;
+    text-align: center;
+  }
+
+  .input__left__message{
+    text-align: right;
+  }
+
+  .sign__up__instead{
+    margin: 1.5rem auto;
+  }
+
 
 
 `;

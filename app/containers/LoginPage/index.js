@@ -4,8 +4,8 @@
  *
  */
 
-import React, { useState } from 'react';
-import PropTypes from 'prop-types';
+import React from 'react';
+// import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Helmet } from 'react-helmet';
 
@@ -18,14 +18,15 @@ import makeSelectLoginPage from './selectors';
 import reducer from './reducer';
 import saga from './saga';
 
-import DynamicSwitch from '../../components/DynamicSwitch/Loadable';
+import Login from '../../components/Login/Loadable';
 
 export function LoginPage() {
   useInjectReducer({ key: 'loginPage', reducer });
   useInjectSaga({ key: 'loginPage', saga });
 
-  const options = ['Personal', 'Company'];
-  const [selectedOption, setSelectedOption] = useState(0);
+  const onLoginSubmit = (loginEmail, loginPassword) => {
+    console.log(loginEmail, loginPassword);
+  };
 
   return (
     <div>
@@ -37,21 +38,18 @@ export function LoginPage() {
         <div className="login__page__title">
           <h1>Welcome to Gotipath</h1>
         </div>
-        <div className="login__page__switch">
-          <DynamicSwitch
-            options={options}
-            setSelectedIndex={setSelectedOption}
-            selectedIndex={selectedOption}
-          />
+
+        <div className="login__form__section">
+          <Login onLoginSubmit={onLoginSubmit} />
         </div>
       </div>
     </div>
   );
 }
 
-LoginPage.propTypes = {
-  dispatch: PropTypes.func.isRequired,
-};
+// LoginPage.propTypes = {
+//   dispatch: PropTypes.func.isRequired,
+// };
 
 const mapStateToProps = createStructuredSelector({
   loginPage: makeSelectLoginPage(),
