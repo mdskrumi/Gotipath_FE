@@ -30,6 +30,10 @@ const GlobalStyle = createGlobalStyle`
     line-height: 1.5em;
   }
 
+  img {
+    width: 100%;
+  }
+
   /* Own Styles */
 
   .login__page__body, 

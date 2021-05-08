@@ -15,6 +15,12 @@ import LoginPage from 'containers/LoginPage/Loadable';
 import SignUpPage from 'containers/SignUpPage/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
 
+import GotiSideBar from '../../components/GotiSideBar/Loadable';
+
+import HomeImage from './images/home.png';
+import PullZoneImage from './images/pullzone.png';
+import StoreageImage from './images/storeage.png';
+
 import GlobalStyle from '../../global-styles';
 
 export default function App() {
@@ -23,6 +29,31 @@ export default function App() {
     user_name: 'Sakib',
   };
   // const user = null;
+
+  const navBarData = [
+    {
+      title: 'Account',
+      link: '#',
+    },
+  ];
+
+  const sideBarData = [
+    {
+      title: 'Home',
+      icon: HomeImage,
+      link: '/',
+    },
+    {
+      title: 'Pull Zone',
+      icon: PullZoneImage,
+      link: '/pull-zone',
+    },
+    {
+      title: 'Storeage',
+      icon: StoreageImage,
+      link: '/storeage',
+    },
+  ];
 
   return !user ? (
     <>
@@ -34,12 +65,17 @@ export default function App() {
       <GlobalStyle />
     </>
   ) : (
-    <>
-      <Switch>
-        <Route exact path="/" component={HomePage} />
-        <Route component={NotFoundPage} />
-      </Switch>
-      <GlobalStyle />
-    </>
+    <div style={{ display: 'flex' }}>
+      <div>
+        <GotiSideBar data={sideBarData} />
+      </div>
+      <div>
+        <Switch>
+          <Route exact path="/" component={HomePage} />
+          <Route component={NotFoundPage} />
+        </Switch>
+        <GlobalStyle />
+      </div>
+    </div>
   );
 }
