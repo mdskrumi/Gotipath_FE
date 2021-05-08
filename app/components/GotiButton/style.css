@@ -1,0 +1,17 @@
+.goti_button {
+  background-color: #01ccc5;
+  color: #003b39;
+  font-weight: bold;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-left: 3em;
+  padding-right: 3em;
+  border-color: #003b39;
+  border-radius: 0.5em;
+}
+.goti_button:hover {
+  background-color: #003b39;
+  color: #01ccc5;
+  border-color: #01ccc5;
+  cursor: pointer;
+}

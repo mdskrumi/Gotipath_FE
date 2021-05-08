@@ -18,15 +18,28 @@ import NotFoundPage from 'containers/NotFoundPage/Loadable';
 import GlobalStyle from '../../global-styles';
 
 export default function App() {
-  return (
-    <div>
+  const user = {
+    id: 1,
+    user_name: 'Sakib',
+  };
+  // const user = null;
+
+  return !user ? (
+    <>
       <Switch>
         <Route exact path="/" component={LoginPage} />
         <Route exact path="/sign-up" component={SignUpPage} />
-        <Route exact path="/home" component={HomePage} />
         <Route component={NotFoundPage} />
       </Switch>
       <GlobalStyle />
-    </div>
+    </>
+  ) : (
+    <>
+      <Switch>
+        <Route exact path="/" component={HomePage} />
+        <Route component={NotFoundPage} />
+      </Switch>
+      <GlobalStyle />
+    </>
   );
 }

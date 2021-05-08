@@ -6,7 +6,8 @@
 
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-// import styled from 'styled-components';
+
+import GotiButton from '../GotiButton/Loadable';
 
 function Login(props) {
   const { onLoginSubmit } = props;
@@ -43,23 +44,18 @@ function Login(props) {
           </div>
         </div>
 
-        <button
-          className="ui button"
-          type="submit"
+        <GotiButton
+          text="Login"
           onClick={e => {
             e.preventDefault();
             onLoginSubmit(loginEmail, loginPassword);
           }}
-        >
-          Login
-        </button>
+        />
       </form>
 
       <div className="sign__up__instead">
         <a href="/sign-up">
-          <button className="ui button" type="button">
-            Sign Up, Instead
-          </button>
+          <GotiButton text=" Sign Up, Instead" />
         </a>
       </div>
     </>

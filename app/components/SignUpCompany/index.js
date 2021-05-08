@@ -11,6 +11,8 @@ import PropTypes from 'prop-types';
 // import { FormattedMessage } from 'react-intl';
 // import messages from './messages';
 
+import GotiButton from '../GotiButton/Loadable';
+
 function SignUpCompany(props) {
   const { onCompanySignUpSubmit } = props;
 
@@ -70,9 +72,8 @@ function SignUpCompany(props) {
           />
         </div>
 
-        <button
-          className="ui button"
-          type="submit"
+        <GotiButton
+          text="Sign Up"
           onClick={e => {
             e.preventDefault();
             onCompanySignUpSubmit(
@@ -82,16 +83,12 @@ function SignUpCompany(props) {
               signupConfirmPassword,
             );
           }}
-        >
-          Sign Up
-        </button>
+        />
       </form>
 
       <div className="login__instead">
         <a href="/">
-          <button className="ui button" type="button">
-            Login, Instead
-          </button>
+          <GotiButton text="Login, Instead" />
         </a>
       </div>
     </>

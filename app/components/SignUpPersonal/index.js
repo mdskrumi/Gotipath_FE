@@ -8,6 +8,8 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 // import styled from 'styled-components';
 
+import GotiButton from '../GotiButton/Loadable';
+
 function SignUpPersonal(props) {
   const { onPersonalSignUpSubmit } = props;
 
@@ -75,9 +77,8 @@ function SignUpPersonal(props) {
             }}
           />
         </div>
-        <button
-          className="ui button"
-          type="submit"
+        <GotiButton
+          text="Sign Up"
           onClick={e => {
             e.preventDefault();
             onPersonalSignUpSubmit(
@@ -88,16 +89,12 @@ function SignUpPersonal(props) {
               signupConfirmPassword,
             );
           }}
-        >
-          Sign Up
-        </button>
+        />
       </form>
 
       <div className="login__instead">
         <a href="/">
-          <button className="ui button" type="button">
-            Login, Instead
-          </button>
+          <GotiButton text="Login, Instead" />
         </a>
       </div>
     </>

@@ -5,6 +5,8 @@ const GlobalStyle = createGlobalStyle`
   body {
     height: 100%;
     width: 100%;
+    max-width: 1920px;
+    margin: auto;
   }
 
   body {
@@ -16,9 +18,10 @@ const GlobalStyle = createGlobalStyle`
   }
 
   #app {
-    background-color: #fafafa;
+    background-color: #f5f9ff;
     min-height: 100%;
     min-width: 100%;
+    color: #003b39;
   }
 
   p,
@@ -89,11 +92,11 @@ const GlobalStyle = createGlobalStyle`
   }
 
   .selected {
-    color: #F7791E;
+    color: #003b39;
     font-weight: bold;
     width: 50%;
     padding: 10px;
-    background-color: white;
+    background-color: #01ccc5;
     border-radius: 30px;
   }
 
