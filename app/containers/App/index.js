@@ -15,6 +15,7 @@ import LoginPage from 'containers/LoginPage/Loadable';
 import SignUpPage from 'containers/SignUpPage/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
 
+import Header from '../../components/Header/Loadable';
 import GotiSideBar from '../../components/GotiSideBar/Loadable';
 
 import HomeImage from './images/home.png';
@@ -30,10 +31,10 @@ export default function App() {
   };
   // const user = null;
 
-  const navBarData = [
+  const headerData = [
     {
       title: 'Account',
-      link: '#',
+      link: '/account',
     },
   ];
 
@@ -65,11 +66,10 @@ export default function App() {
       <GlobalStyle />
     </>
   ) : (
-    <div style={{ display: 'flex' }}>
-      <div>
+    <div>
+      <Header data={headerData} />
+      <div style={{ display: 'flex' }}>
         <GotiSideBar data={sideBarData} />
-      </div>
-      <div>
         <Switch>
           <Route exact path="/" component={HomePage} />
           <Route component={NotFoundPage} />

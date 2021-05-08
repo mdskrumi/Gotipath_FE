@@ -1,0 +1,15 @@
+.header__container {
+  align-items: center;
+  background-color: #003533;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  padding: 10px;
+}
+
+.header__list {
+  margin-right: 20px;
+}
+.header__list__item {
+  font-size: 1.5em;
+}
